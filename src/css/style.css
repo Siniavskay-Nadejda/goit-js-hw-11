@@ -26,8 +26,7 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
   position: fixed;
-  background-color: #3f57b3;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
+  background-color: #f759e9;
 }
 
 .search-form {
@@ -38,7 +37,7 @@ p {
 
 .search-form input {
   width: 20%;
-  border-radius: 4px 0 0 4px;
+  border-radius: 25px 0 0 25px;
   border: none;
   outline: none;
   background-color: #fff;
@@ -52,16 +51,14 @@ p {
   align-items: center;
   width: 2.5em;
   border: none;
-  background-color: rgb(200, 200, 200);
-
-  border-radius: 0 4px 4px 0;
+  background-color: rgb(212, 175, 175);
+  border-radius: 0 25px 25px 0;
   cursor: pointer;
 }
 
 .search-form button:hover,
 .search-form button:focus {
-  background-color: rgb(180, 180, 180);
-  transition: all 0.3s;
+  background-color: #f51b93;
 }
 
 .gallery-container {
@@ -100,11 +97,9 @@ p {
   margin-top: 20px;
   margin-left: 20px;
   min-width: 320px;
-  flex-basis: calc((100% - 80px) / 4);
+
   border: 2px solid rgb(241, 238, 238);
   border-radius: 10px;
-  overflow: hidden;
-  transition: all 0.3s;
 }
 
 .gallery__link:hover,
@@ -150,15 +145,15 @@ p {
   margin: 25px auto 0 auto;
   padding: 8px 20px;
   border: none;
-  border-radius: 5px;
-  background-color: #3f57b3;
+  border-radius: 50%;
+  background-color: #f759e9;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   font: inherit;
   color: white;
   cursor: pointer;
 }
 
-.btn-to-top {
+.btn-top {
   position: fixed;
   bottom: 3vh;
   right: 1vw;
@@ -169,7 +164,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #3f57b3;
+  background: #f759e9;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   color: white;
   cursor: pointer;
@@ -177,13 +172,13 @@ p {
   visibility: hidden;
 }
 
-.btn-to-top--visible {
+.btn-top--visible {
   opacity: 1;
   visibility: visible;
 }
 
 .btn-load-more:hover,
-.btn-to-top:hover {
-  background-color: #2b3e88;
+.btn-top:hover {
+  background-color: #f51b93;
   transition: all 0.3s;
 }
