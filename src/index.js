@@ -2,7 +2,7 @@ import './css/style.css'
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox'
 import 'simplelightbox/dist/simple-lightbox.min.css'
-import {fetchImages} from "./js/fatch-card"
+import { fetchImages } from "./js/fatch-card"
 import { renderGallery } from './js/render-gallery'
 import { onScroll, onToTopBtn } from "./js/scroll-top"
 
@@ -35,13 +35,13 @@ function onSearchForm(e) {
 
   fetchImages(query, page, perPage)
     .then(({ data }) => {
-      
+
       if (data.totalHits === 0) {
-         Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.')
+        Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.')
       } else {
         renderGallery(data.hits)
         simpleLightBox = new SimpleLightbox('.gallery a').refresh()
-       Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`)
+        Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`)
 
         if (data.totalHits > perPage) {
           loadMoreBtn.classList.remove('is-hidden')
@@ -64,7 +64,7 @@ function onLoadMoreBtn() {
 
       if (page > totalPages) {
         loadMoreBtn.classList.add('is-hidden')
-       Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.")
+        Notiflix.Notify.failure("We're sorry, but you've reached the end of search results.")
       }
     })
     .catch(error => console.log(error))
